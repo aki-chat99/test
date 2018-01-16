@@ -5,9 +5,8 @@ pipeline {
       steps {
         echo 'current directory'
         sh '''cd /var/lib/jenkins/demo/demo
-sh test.sh
-
-'''
+su - jenkins -s/bin/bash
+./test.sh'''
       }
     }
   }
