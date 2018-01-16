@@ -1,11 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('plan ') {
+    stage('plan') {
       steps {
         echo 'current directory'
-        sh '''cd /var/lib/jenkins/demo/demo
-./test.sh'''
+        sh '''pwd
+cd /var/lib/jenkins/demo/demo
+pwd
+'''
       }
     }
   }
