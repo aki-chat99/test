@@ -7,7 +7,7 @@ pipeline {
         sh '''pwd
 cd /var/lib/jenkins/demo/demo
 pwd
-'''
+./test.sh'''
       }
     }
   }
