@@ -9,7 +9,8 @@ cd /var/lib/jenkins/demo/demo
 pwd
 #./test.sh
 whoami
-echo $0'''
+echo $0
+ps -ef'''
       }
     }
   }
