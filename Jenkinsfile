@@ -8,7 +8,8 @@ pipeline {
 cd /var/lib/jenkins/demo/demo
 pwd
 #./test.sh
-whoami'''
+whoami
+echo $0'''
       }
     }
   }
