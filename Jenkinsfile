@@ -5,7 +5,8 @@ pipeline {
       steps {
         echo 'current directory'
         ws(dir: '/var/lib/jenkins/demo/demo') {
-          sh './test.sh'
+          sh '''pwd
+./test.sh'''
         }
         
       }
