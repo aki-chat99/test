@@ -10,6 +10,7 @@ ls -l
 ./test.sh
 whoami
 sleep 10s
+pwd
 ./test1.sh
 whoami
 sleep 30s
