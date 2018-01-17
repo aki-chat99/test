@@ -8,8 +8,10 @@ pipeline {
           sh '''pwd
 ls -l
 ./test.sh
+whoami
 sleep 10s
 ./test1.sh
+whoami
 sleep 30s
 ./test2.sh'''
         }
