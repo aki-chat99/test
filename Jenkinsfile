@@ -2,21 +2,30 @@ pipeline {
   agent any
   stages {
     stage('plan') {
-      steps {
-        echo 'current directory'
-        ws(dir: '/var/lib/jenkins/demo1') {
-          sh '''pwd
-ls -l
-./test.sh
-whoami
-sleep 10s
-pwd
-./test1.sh
-whoami
-sleep 30s
-./test2.sh'''
+      parallel {
+        stage('plan') {
+          steps {
+            echo 'current directory'
+            ws(dir: '/var/lib/jenkins/demo1') {
+              sh '''pwd
+'''
+            }
+            
+          }
         }
-        
+        stage('infra build') {
+          steps {
+            echo 'building infra'
+            sh '''./test1.sh
+sleep 30s'''
+          }
+        }
+        stage('config infra') {
+          steps {
+            echo 'configure infra'
+            sh './test2.sh'
+          }
+        }
       }
     }
   }
