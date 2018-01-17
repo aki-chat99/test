@@ -6,7 +6,8 @@ pipeline {
         echo 'current directory'
         ws(dir: '/var/lib/jenkins/demo1') {
           sh '''pwd
-ls -l'''
+ls -l
+./test.sh'''
         }
         
       }
