@@ -17,21 +17,15 @@ ls -l
         stage('build infra') {
           steps {
             echo 'build infra'
-            ws(dir: '/var/lib/jenkins/demo1') {
-              sh '''pwd
+            sh '''pwd
 ./test1.sh'''
-            }
-            
           }
         }
         stage('config infra') {
           steps {
             echo 'config infra'
-            ws(dir: '/var/lib/jenkins/demo1') {
-              sh '''pwd
+            sh '''pwd
 ./test2.sh'''
-            }
-            
           }
         }
       }
